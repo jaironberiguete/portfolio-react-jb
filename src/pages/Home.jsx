@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
 export const Home = () => {
-    return  <div> 
-        
+    return ( <div className='min-h-screen'> 
+
         {/* Theme Toggle */}
         
         {/* Background Effects */}
@@ -13,5 +13,6 @@ export const Home = () => {
          
         {/* Footer */}
 
-    </div>;
+    </div>
+    );
 };

@@ -1,9 +1,120 @@
 @import "tailwindcss";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Outfit", Arial, Helvetica, sans-serif;
+body{
+    background-color: black;
 }
 
+@theme {
+    --color-border: hsl(var(--border));
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+
+    --color-primary: hsl(var(--primary));
+    --color-primary-foreground: hsl(var(--primary-foreground));
+
+    --color-card-foreground: hsl(var(--card));
+
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+    --animate-fade-in: fade-in 0.7s ease-out forwards;
+    --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+    --animate-fade-in-delay-2: fade-in 0.7s
+    --ease-out 0.4s forwards;
+    --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+    --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+    --animate meteor: meteor 5s linear infinite;
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: traslateY(0);
+        }
+        50% {
+            transform: traslateY(-10px);
+        }
+    }
+    @keyframes pulse-subtle {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.8;
+        }
+    }
+    @keyframes fade-in {
+        from{
+            opacity: traslateY(20px);
+        }
+        to {
+            opacity: traslateY(0);
+        }
+    }
+    @keyframes meteor {
+        0% {
+            transform: rotate(215deg) tranlateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(215deg) traslateY(-500px);
+            opacity: 0;
+        }
+    }
+
+}
+
+@layer base{
+    :root{
+      --background: 210 40% 98%;
+      --foreground: 222 47% 11%;
+
+      --card: 0 0% 100%;
+
+      --primary: 250 47% 60%;
+      --primary-foreground: 210 40% 98%;
+
+      --border: 214 32% 91%;
+
+    }
+
+    .dark {
+      --background: 222 47% 4%;
+      --foreground: 213 31% 91%;
+
+      --card: 222 47% 8%;
+
+      --primary: 250 65% 65%;
+      --primary-foreground: 213 31% 91%;
+
+      --border: 217 33% 20%;
+    }
+}
+
+@utility container{
+    margin-inline:auto;
+    padding-inline:2rem;
+
+    @media (width >= 640px) {
+        max-width: 640px;
+    }
+    @media (width >= 1024px) {
+        max-width: 1024ppx;
+    }
+    @media (width >= 640px) {
+        max-width: 768px;
+    }
+    @media (width >= 1280px) {
+        max-width: 1280px;
+    }
+    @media (width >= 1400px) {
+        max-width: 1400px;
+    }
+}
+
+@utility text-glow {
+    @apply relative;
+    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+@utility card-hover {
+    @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
