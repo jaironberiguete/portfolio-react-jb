@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 // id, size, x, y, opacity, animationDuration
 export const StarBackground = () => {
     const [stars, setStars] = useState([]);
+            
+    useEffect(()=> {
+        generateStars()
+    }, [])
 
     const generateStars =() => {
         const numberOfStars = Math.floor((window.innerHeight * window.innerWidth) / 10000)
-        
-        useEffect(()=> {
-            generateStars()
-        }, [])
 
         const newStars = []
 
-        for (let i = 0; i< numberOfStars; i++){
-           newStars.push({
+        for (let i = 0; i < numberOfStars; i++){
+            newStars.push({
             id: i,
             size: Math.random() * 3 + 1,
             x: Math.random() * 100,
@@ -31,8 +31,8 @@ export const StarBackground = () => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
        {stars.map((star) => (
           <div 
-            key={star.id} 
-            className="star animate-pulse-subtle" 
+            key={star.id}  
+            className="star animate-meteor" 
             style={{
                 width: star.size + "px",
                 height: star.size + "px",

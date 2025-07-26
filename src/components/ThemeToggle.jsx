@@ -33,8 +33,8 @@ export const ThemeToggle = () => {
         "fixed max-sm:hidden top-3 right-5 z-50 rounded-full transiton-colors duration-300",
         "fucus-ouline-hidden"
     )}> 
-        {isDarkMode ? (<Sun className="h-7 w-7 text-yellow-400" />) : 
-        (<Moon className="h-7 w-7 text-blue-900" />)} 
+        {isDarkMode ? (<Sun className="h-7 w-7 text-primary" />) : 
+        (<Moon className="h-7 w-7 text-primary" />)} 
     </button>
     );
 }
