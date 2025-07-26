@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react"
+import { useEffect, useState } from "react";
 
 const overviews = [
   {
@@ -27,7 +28,23 @@ const overviews = [
   }
 ];
 
+
 export const HeroSection = () => {
+ const [index, setIndex] = useState(0);
+ const [fade, setFade] = useState("fade-in");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade("fade-out");
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % overviews.length);
+        setFade("fade-in");
+      }, 700); // match animation duration
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
     return (
     <section 
@@ -41,11 +58,8 @@ export const HeroSection = () => {
                 <span className="text-primary opacity-0 animate-fade-in-delay-1"> Jairon</span>
                 <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Beriguete</span>
             </h1>
-
-            <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                A Software Engineer and DevOps enthusiast with a strong foundation 
-                in backend development, cloud deployment, and modern web technologies. 
-            </p>
+            <p className={`text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-${fade}-delay-3`}>
+                 {overviews[index].description} </p>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                 <a href="#projects" className="cosmic-button">
