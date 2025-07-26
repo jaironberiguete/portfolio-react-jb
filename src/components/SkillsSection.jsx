@@ -44,7 +44,7 @@ export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("DevOps");
     const filteredSkills = skills.filter((skill) => activeCategory === "All" || skill.category === activeCategory)
     return <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-        <div className="containe mx-auto max-w-5xl ">
+        <div className="container mx-auto max-w-5xl ">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center ">
                 My <span className="text-primary"> Skills</span>
             </h2>

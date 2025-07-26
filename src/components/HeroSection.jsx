@@ -1,5 +1,32 @@
 import { ArrowDown } from "lucide-react"
 
+const overviews = [
+  {
+    id: 1,
+    description: "Full-stack Software Engineer with strong backend and DevOps expertise. I specialize in building scalable applications using Python, FastAPI, Docker, and Kubernetes, with solid experience in microservices architecture."
+  },
+  {
+    id: 2,
+    description: "Proficient DevOps Engineer experienced in automating CI/CD pipelines, managing containerized workloads with Docker & Kubernetes, and deploying infrastructure via Terraform and GitHub Actions."
+  },
+  {
+    id: 3,
+    description: "I develop modern web applications with React, Tailwind CSS, and Vite, integrating secure JWT authentication, file upload systems, and real-time messaging using RabbitMQ."
+  },
+  {
+    id: 4,
+    description: "My recent project, a cloud-native MP3 conversion app, demonstrates my ability to architect and deploy microservices integrated with FastAPI, MongoDB, RabbitMQ, and frontend technologies in a production-ready environment."
+  },
+  {
+    id: 5,
+    description: "I bring hands-on experience in cloud computing, Docker Swarm, and Kubernetes orchestration. I focus on optimizing infrastructure for high availability, scalability, and performance."
+  },
+  {
+    id: 6,
+    description: "Whether you're launching an MVP or need DevOps support for an existing app, I bring a solution-driven mindset, clear communication, and a strong commitment to delivering clean, maintainable code."
+  }
+];
+
 export const HeroSection = () => {
 
     return (
