@@ -75,16 +75,16 @@ export const ContactSection = () => {
                          <div className="pt-8">
                     <h4 className="font-medium mb-4"> Connect With Me </h4>
                     <div className="flex space-x-4 justify-center ">
-                         <a href=" " target="blank">
+                         <a href="https://www.linkedin.com/in/jairon-beriguete/" target="blank">
                             <LinkedinIcon/>
                          </a>
-                         <a href=" " target="blank">
+                         {/* <a href=" " target="blank">
                             <Instagram/>
-                         </a>
-                         <a href=" " target="blank">
+                         </a> */}
+                         <a href="https://www.youtube.com/@jairon2592" target="blank">
                             <Youtube/>
                          </a>
-                         <a href=" " target="blank">
+                         <a href="https://www.twitch.tv/jaironsketcher " target="blank">
                             <Twitch/>
                          </a>
                     </div>

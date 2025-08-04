@@ -20,7 +20,7 @@
     --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
    
     /* Fade outs */
-    --animate-fade-out-delay-3: fade-out 0.7s ease-in 0.8s forwards;
+    --animate-fade-out-delay-2: fade-out 0.7s ease-in 0.8s forwards;
 
     --animate-meteor: meteor 5s linear infinite;
     --color-muted-foreground: hsl(var(--muted-foreground));
@@ -46,21 +46,21 @@
     @keyframes fade-in {
         from{
             opacity: 0;
-            transform: traslateY(20px);
+            transform: translateY(20px);
         }
         to {
             opacity: 1; 
-            transform: traslateY(0);
+            transform: translateY(0);
         }
     }
     @keyframes fade-out {
         from{
             opacity: 1;
-            transform: traslateY(0);
+            transform: translateY(0);
         }
         to {
             opacity: 0; 
-            transform: traslateY(-20px);
+            transform: translateY(-20px);
         }
     }
     @keyframes meteor {

@@ -1,30 +1,31 @@
 import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react";
+import { cn } from "../lib/utils";
 
 const overviews = [
   {
     id: 1,
-    description: "Full-stack Software Engineer with strong backend and DevOps expertise. I specialize in building scalable applications using Python, FastAPI, Docker, and Kubernetes, with solid experience in microservices architecture."
+    description: "Full-stack Engineer skilled in backend and DevOps, building scalable apps with Python, FastAPI, and Docker."
   },
   {
     id: 2,
-    description: "Proficient DevOps Engineer experienced in automating CI/CD pipelines, managing containerized workloads with Docker & Kubernetes, and deploying infrastructure via Terraform and GitHub Actions."
+    description: "DevOps expert automating CI/CD pipelines and managing Kubernetes-based deployments with Terraform and GitHub Actions."
   },
   {
     id: 3,
-    description: "I develop modern web applications with React, Tailwind CSS, and Vite, integrating secure JWT authentication, file upload systems, and real-time messaging using RabbitMQ."
+    description: "Frontend developer creating secure web apps with React, Tailwind CSS, JWT auth, and real-time features using RabbitMQ."
   },
   {
     id: 4,
-    description: "My recent project, a cloud-native MP3 conversion app, demonstrates my ability to architect and deploy microservices integrated with FastAPI, MongoDB, RabbitMQ, and frontend technologies in a production-ready environment."
+    description: "Built a cloud-native MP3 converter using FastAPI, MongoDB, and microservices with a production-ready frontend."
   },
   {
     id: 5,
-    description: "I bring hands-on experience in cloud computing, Docker Swarm, and Kubernetes orchestration. I focus on optimizing infrastructure for high availability, scalability, and performance."
+    description: "Experienced in Docker Swarm, Kubernetes, and infrastructure optimization for availability and performance."
   },
   {
     id: 6,
-    description: "Whether you're launching an MVP or need DevOps support for an existing app, I bring a solution-driven mindset, clear communication, and a strong commitment to delivering clean, maintainable code."
+    description: "Focused on clean code, problem-solving, and DevOps support for MVPs and production systems alike."
   }
 ];
 
@@ -32,15 +33,24 @@ const overviews = [
 export const HeroSection = () => {
  const [index, setIndex] = useState(0);
  const [fade, setFade] = useState("fade-in");
+ const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    const storedTheme = localStorage.getItem("theme")
+    if (storedTheme == "dark"){
+        setIsDark(true)
+        
+
+    }else {
+        setIsDark(false)
+    }
     const interval = setInterval(() => {
       setFade("fade-out");
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % overviews.length);
         setFade("fade-in");
-      }, 700); // match animation duration
-    }, 4000);
+      },2000); // match animation duration
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,19 +59,24 @@ export const HeroSection = () => {
     return (
     <section 
     id="hero" 
-    className="relative min-h-screen flex flex-col items-center justify-center px-4"
+    className="relative min-h-screen flex flex-col items-center justify-center"
     > 
     <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
+            <div className="h-50 w-50 mx-auto overflow-hidden opacity-0 animate-fade-in ">
+               {isDark ? (<img src="images/logo-dark.png" className="py-7 "/>) : (<img src="images/logo.svg" className="py-7 "/>)}
+            </div>
+
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
                 <span className="text-primary opacity-0 animate-fade-in-delay-1"> Jairon</span>
                 <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Beriguete</span>
             </h1>
-            <p className={`text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-${fade}-delay-3`}>
+            <p className={cn("text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto min-h-[7rem]",
+                    fade === "fade-in" ? "opacity-0 animate-fade-in-delay-2" : "animate-fade-out-delay-2")}>
                  {overviews[index].description} </p>
 
-            <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+            <div className=" opacity-0 animate-fade-in-delay-4">
                 <a href="#projects" className="cosmic-button">
                    View My Work
                 </a>

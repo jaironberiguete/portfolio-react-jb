@@ -16,8 +16,8 @@ const projects = [
     description: "A responsive portfolio website for a photography business built with React, Vite, and Tailwind CSS. Features galleries, contact forms, and smooth scrolling.",
     image: "/projects/photography-site.png",
     tags: ["React", "Tailwind", "Vite"],
-    demoUrl: "https://fotografiajb.vercel.app/",
-    githubUrl: "https://github.com/jaironberiguete/galeria-jb",
+    demoUrl: "https://nels-gallery-website-jb.vercel.app/",
+    githubUrl: "https://github.com/jaironberiguete/nels-gallery-website-jb",
   },
   {
     id: 3,

@@ -2,6 +2,7 @@ import { href } from "react-router-dom";
 import { cn } from "../lib/utils";
 import { useEffect, useState } from "react";
 import { Key, Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
     {name: "Home", href:"#hero"},
@@ -17,7 +18,7 @@ export const Navbar = ()=> {
 
    useEffect(() => {
       const handleScroll = () => {
-        setIsScrolled(window.scrollY > 10)
+        setIsScrolled(window.scrollY > 15)
       }
 
       window.addEventListener("scroll", handleScroll)
@@ -26,7 +27,7 @@ export const Navbar = ()=> {
     return (
     <nav className={cn(  
         "fixed w-full z-40 transition-all duration-300", 
-        isScrolled ? "py-3 bg-background/9 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled ? "py-1 bg-background/7 backdrop-blur-md shadow-xs" : "py-5"
     )}>  
     
         <div className="container flex items-center justify-between">
