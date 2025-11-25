@@ -62,9 +62,9 @@ export const HeroSection = () => {
     > 
     <div className="container max-w-4xl mx-auto text-center z-10 ">
         <div className="space-y-6">
-            <div id="logo-toggle" className="h-50 w-50 mx-auto overflow-hidden opacity-0 animate-fade-in ">
+            {/* <div id="logo-toggle" className="h-50 w-50 mx-auto overflow-hidden opacity-0 animate-fade-in ">
                {isDark ? (<img src="images/logo-dark.png" className="py-7 "/>) : (<img src="images/logo.svg" className="py-7 "/>)}
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="opacity-0 animate-fade-in "> Hi, I'm</span>
