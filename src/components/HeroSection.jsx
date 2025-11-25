@@ -55,21 +55,20 @@ export const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-
     return (
     <section 
     id="hero" 
     className="relative min-h-screen flex flex-col items-center justify-center"
     > 
-    <div className="container max-w-4xl mx-auto text-center z-10">
+    <div className="container max-w-4xl mx-auto text-center z-10 ">
         <div className="space-y-6">
-            <div className="h-50 w-50 mx-auto overflow-hidden opacity-0 animate-fade-in ">
+            <div id="logo-toggle" className="h-50 w-50 mx-auto overflow-hidden opacity-0 animate-fade-in ">
                {isDark ? (<img src="images/logo-dark.png" className="py-7 "/>) : (<img src="images/logo.svg" className="py-7 "/>)}
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-                <span className="text-primary opacity-0 animate-fade-in-delay-1"> Jairon</span>
+                <span className="opacity-0 animate-fade-in "> Hi, I'm</span>
+                <span className="text-primary opacity-0 animate-fade-in-delay-1" > Jairon</span>
                 <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Beriguete</span>
             </h1>
             <p className={cn("text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto min-h-[7rem]",

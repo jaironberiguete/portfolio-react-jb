@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "CI/CD Pipeline with GitHub Actions",
+    title: "Real-time chat using FastAPI + WebSockets",
     description: "Automated deployment pipeline using Docker and GitHub Actions for a full-stack application. ",
     image: "/projects/devops-pipeline.png",
     tags: ["CI/CD", "GitHub Actions", "Docker"],

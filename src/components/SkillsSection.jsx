@@ -6,10 +6,14 @@ const skills = [
   { name: "Docker", level: 82, category: "DevOps" },
   { name: "Kubernetes", level: 60, category: "DevOps" },
   { name: "GitHub Actions (CI/CD)", level: 80, category: "DevOps" },
+  { name: "Jenkins", level: 80, category: "DevOps" },
   { name: "Linux / Shell Scripting", level: 78, category: "DevOps" },
   { name: "Git / GitHub", level: 85, category: "DevOps" },
   { name: "DevOps (General)", level: 80, category: "DevOps" },
   { name: "CI/CD Pipelines", level: 80, category: "DevOps" },
+  { name: "Terraform", level: 70, category: "DevOps" },
+  { name: "Ansible", level: 70, category: "DevOps" },
+
 
   
     // Backend
