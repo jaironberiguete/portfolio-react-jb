@@ -6,52 +6,65 @@ const projects = [
     title: "MP3 Converter",
     description:
       "A full-stack microservices-based application that converts video to MP3 using Python, FastAPI, RabbitMQ, MongoDB, and Docker.",
-    image: "/projects/mp3-converter.jpeg",
-    tags: ["React", "RabbitMQ", "Docker"],
+    image: "/projects/system-design.png",
+    tags: ["Flask", "RabbitMQ", "Docker", "MongoDB", "K8s", "CI/CD", "Git", "Terraform"],
     demoUrl: "https://ms-system-coverter-jb.vercel.app/",
     githubUrl: "https://github.com/jaironberiguete/ms-system-coverter-jb",
   },
-  {
+    {
     id: 2,
-    title: "Photography Portfolio",
+    title: "E-commerce Website",
     description:
-      "A responsive portfolio website for a photography business built with React, Vite, and Tailwind CSS.",
-    image: "/projects/photography-site.png",
-    tags: ["React", "Tailwind", "Vite"],
-    demoUrl: "https://nels-gallery-website-jb.vercel.app/",
+      "Full stack e-commerce clothing store interface using React and Django Framework for the backend.",
+    image: "/projects/22mystyle.png",
+    tags: ["React", "Python", "Django", "MySQL"],
+    demoUrl: "https://web-22my-style-jb.vercel.app/",
     githubUrl:
-      "https://github.com/jaironberiguete/nels-gallery-website-jb",
+      "https://github.com/jaironberiguete/web-22my-style-jb",
   },
+
   {
     id: 3,
     title: "Real-time Chat using FastAPI + WebSockets",
     description:
       "Real-time communication using FastAPI WebSockets + Docker + scalable service architecture.",
-    image: "/projects/devops-pipeline.png",
+    image: "/projects/realtime-chat.png",
     tags: ["CI/CD", "GitHub Actions", "Docker"],
     demoUrl: "",
     githubUrl: "https://github.com/jaironberiguete/ms-system-coverter-jb",
   },
   {
     id: 4,
-    title: "Emotion Detection AI",
+    title: "Real-Time Analytics Dashboard",
     description:
-      "A Python desktop application detecting human emotions using computer vision and ML techniques.",
+      "Real-time dashboard streaming data via AWS Kinesis and WebSockets, with a React frontend on S3 + CloudFront. Dockerized backend and IaC showcase cloud architecture and full-stack skills.",
     image: "/projects/emotion-detector.png",
     tags: ["Python", "OpenCV", "ML"],
     demoUrl: "",
     githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
   },
-  {
+
+    {
     id: 5,
-    title: "Cyclistic Bike-Share Data Analysis",
+    title: "Serverless URL Shortener",
     description:
-      "Data analysis project using R and Tableau to discover ridership patterns and business insights.",
-    image: "/projects/cyclistic-analysis.png",
-    tags: ["R", "Tableau", "Data Analysis"],
+      "Serverless URL Shortener using AWS Lambda, API Gateway, DynamoDB, and S3. Users can shorten URLs with a fully serverless, scalable backend..",
+    image: "/projects/serverless-app.png",
+    tags: ["Python", "OpenCV", "ML"],
     demoUrl: "",
+    githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
+  },
+
+    {
+    id: 6,
+    title: "Personal Portfolio with CI/CD on AWS",
+    description:
+      "Automated portfolio deployment using React, S3, CloudFront, and GitHub Actions. Fully CI/CD-driven hosting showcasing DevOps and AWS cloud skills..",
+    image: "/projects/photography-site.png",
+    tags: ["React", "Tailwind", "Vite"],
+    demoUrl: "https://nels-gallery-website-jb.vercel.app/",
     githubUrl:
-      "https://github.com/jaironberiguete/cyclistic-bike-share-analysis",
+      "https://github.com/jaironberiguete/nels-gallery-website-jb",
   },
 ];
 

@@ -1,32 +1,5 @@
 @import "tailwindcss";
 
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.4); }
-}
-
-.animate-twinkle {
-  animation: twinkle ease-in-out infinite alternate;
-}
-
-@keyframes meteorTrail {
-  0% {
-    transform: translate(0, 0) rotate(45deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-300px, 300px) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-.animate-meteorTrail {
-  animation: meteorTrail linear infinite;
-}
-
 
 @theme {
     --color-border: hsl(var(--border));
@@ -76,6 +49,11 @@
     @keyframes fade-out {
         from { opacity: 1; transform: translateY(0); }
         to   { opacity: 0; transform: translateY(-15px); }
+    }
+
+    @keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
     }
 
     /* 🌠 NEW smoother meteor trail */
@@ -185,6 +163,17 @@
     @apply absolute rounded-full bg-white;
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
+
+@utility hero-grid-animation {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 18s linear infinite;
+}
+
+
+
 
 @utility meteor {
     @apply absolute rounded-full;
