@@ -17,12 +17,18 @@ export const Navbar = ({ onToggle }) => {
   return (
     <nav className="fixed w-full z-50 py-3 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+           {/* Logo */}
+          <a href="" className="w-9 h-9"><img src="images/logo.png" alt="logo" /></a>
+
         <a href="#hero" className="text-lg font-bold">
           Jairon Beriguete
         </a>
+        
 
         {/* Desktop menu */}
         <div className="hidden sm: pr-24 md:flex items-center gap-6">
+
+
           {nav.map((item) => (
             <a
               key={item.name}
