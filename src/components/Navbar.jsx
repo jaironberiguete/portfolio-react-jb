@@ -1,77 +1,72 @@
-import { href } from "react-router-dom";
-import { cn } from "../lib/utils";
-import { useEffect, useState } from "react";
-import { Key, Menu, X } from "lucide-react";
+import React from "react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navItems = [
-    {name: "Home", href:"#hero"},
-    {name: "About", href:"#about"},
-    {name: "Skills", href:"#skills"},
-    {name: "Projects", href:"#projects"},
-    {name: "Contact", href:"#contact"},
-]
+export const Navbar = ({ onToggle }) => {
+  const [open, setOpen] = React.useState(false);
 
-export const Navbar = ()=> {
-   const [isScrolled, setIsScrolled] = useState(false)
-   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const nav = [
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    // { name: "Certificates", href: "#certificates" },
+    { name: "Contact", href: "#contact" }, 
+  ];
 
-   useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 15)
-      }
+  return (
+    <nav className="fixed w-full z-50 py-3 backdrop-blur-xl border-b border-white/5">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <a href="#hero" className="text-lg font-bold">
+          Jairon Beriguete
+        </a>
 
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-   }, []);
-    return (
-    <nav className={cn(  
-        "fixed w-full z-40 transition-all duration-300", 
-        isScrolled ? "py-1 bg-background/10 backdrop-blur-md shadow-xs" : "py-5"
-    )}>  
-    
-        <div className="container flex items-center justify-between">
-            <a 
-               className="text-xl font-bold text-primary flex items-center"
-               href="#hero"
+        {/* Desktop menu */}
+        <div className="hidden sm: pr-24 md:flex items-center gap-6">
+          {nav.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm opacity-90 hover:opacity-100"
             >
-                <span className="relative z-10"> 
-                    <span className="text-foreground">Jairon Beriguete | </span> Portfolio
-                </span>
+              {item.name}
             </a>
+          ))}
 
-            {/* Desktop Nav*/}
-             <div className="hidden md:flex space-x-8">
-                {navItems.map((item, key) =>(
-                    <a key = {key} 
-                    href={item.href} 
-                    className="text-foreground/80 hover:text-primary
-                    transition-colors duration-300">
-                        {item.name} </a>
-                ))} 
-             </div>
-                {/* Mobile Nav */}
-                <button onClick={() => setIsMenuOpen((prev) => !prev)} 
-                className="md:hidden p-2 text-foreground z-50"
-                aria-label={isMenuOpen ? "Close Menu": "Open Menu"}>
-                {isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
-                </button>
-
-              <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md  z-40 flex flex-col items-center justify-center",
-                "transition-all duration-300 md:hidden", 
-                isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                 )}>
-                <div className="flex flex-col space-y-8 text-xl">
-                    {navItems.map((item, key) =>(
-                        <a key = {key} href={item.href} className="text-foreground/80 hover:text-primary
-                        transition-colors duration-300"
-                        onClick={() => setIsMenuOpen(false)}>
-                            {item.name} </a>
-                    ))}
-                </div>
-               </div>
-
+          <div className="sm: ml-4">
+          <ThemeToggle onToggle={onToggle} />
+          </div>
+          
         </div>
+
+        
+
+        {/* Mobile menu button */}
+        <button className="md:hidden" onClick={() => setOpen((o) => !o)}>
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="md:hidden  backdrop-blur-md py-6">
+          <div className="flex flex-col items-center gap-6">
+            {nav.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="text-sm opacity-90 hover:opacity-100"
+              >
+                {item.name}
+              </a>
+            ))}
+            <div className="flex justify-center mt-auto">
+            <ThemeToggle onToggle={onToggle} /> 
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
-    );
-}
+  );
+};

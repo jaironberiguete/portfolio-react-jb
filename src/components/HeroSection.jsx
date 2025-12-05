@@ -3,33 +3,13 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
 const overviews = [
-  {
-    id: 1,
-    description: "Full-stack Engineer skilled in backend and DevOps, building scalable apps with Python, FastAPI, and Docker."
-  },
-  {
-    id: 2,
-    description: "DevOps expert automating CI/CD pipelines and managing Kubernetes-based deployments with Terraform and GitHub Actions."
-  },
-  {
-    id: 3,
-    description: "Frontend developer creating secure web apps with React, Tailwind CSS, JWT auth, and real-time features using RabbitMQ."
-  },
-  {
-    id: 4,
-    description: "Built a cloud-native MP3 converter using FastAPI, MongoDB, and microservices with a production-ready frontend."
-  },
-  {
-    id: 5,
-    description: "Experienced in Docker Swarm, Kubernetes, and infrastructure optimization for availability and performance."
-  },
-  {
-    id: 6,
-    description: "Focused on clean code, problem-solving, and DevOps support for MVPs and production systems alike."
-  }
+  {id:1, description: 'Full-stack Engineer skilled in backend and DevOps, building scalable apps with Python, FastAPI, and Docker.'},
+  {id:2, description: 'DevOps expert automating CI/CD pipelines and managing Kubernetes-based deployments with Terraform and GitHub Actions.'},
+  {id:3, description: 'Frontend developer creating secure web apps with React, Tailwind CSS, JWT auth, and real-time features using RabbitMQ.'},
+  {id:4, description: 'Built a cloud-native MP3 converter using FastAPI, MongoDB, and microservices with a production-ready frontend.'},
+  {id:5, description: 'Experienced in Docker Swarm, Kubernetes, and infrastructure optimization for availability and performance.'},
+  {id:6, description: 'Focused on clean code, problem-solving, and DevOps support for MVPs and production systems alike.'}
 ];
-
-
 export const HeroSection = () => {
  const [index, setIndex] = useState(0);
  const [fade, setFade] = useState("fade-in");

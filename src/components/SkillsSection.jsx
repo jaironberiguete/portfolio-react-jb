@@ -1,8 +1,8 @@
 import { useState } from "react";
-import {cn} from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 const skills = [
-    //DevOps
+  // DevOps
   { name: "Docker", level: 82, category: "DevOps" },
   { name: "Kubernetes", level: 60, category: "DevOps" },
   { name: "GitHub Actions (CI/CD)", level: 80, category: "DevOps" },
@@ -14,9 +14,7 @@ const skills = [
   { name: "Terraform", level: 70, category: "DevOps" },
   { name: "Ansible", level: 70, category: "DevOps" },
 
-
-  
-    // Backend
+  // Backend
   { name: "Python", level: 85, category: "Backend" },
   { name: "FastAPI", level: 80, category: "Backend" },
   { name: "Node.js", level: 65, category: "Backend" },
@@ -29,7 +27,7 @@ const skills = [
   { name: "Backend Development", level: 85, category: "Backend" },
   { name: "System Design Basics", level: 65, category: "Backend" },
 
-  //Frontend
+  // Frontend
   { name: "JavaScript", level: 75, category: "Frontend" },
   { name: "React", level: 78, category: "Frontend" },
   { name: "Vite", level: 70, category: "Frontend" },
@@ -37,52 +35,68 @@ const skills = [
   { name: "OAuth / Google Login", level: 70, category: "Frontend" },
   { name: "Frontend Development", level: 75, category: "Frontend" },
 
-  //Cloud
+  // Cloud
   { name: "Firebase", level: 65, category: "Cloud" },
-  {name: "AWS", level: 65, category: "Cloud"},
+  { name: "AWS", level: 65, category: "Cloud" },
   { name: "Cloud Hosting (Vercel, Netlify)", level: 70, category: "Cloud" },
 ];
 
-const categories = ["All","DevOps", "Backend", "Frontend", "Cloud"]
+const categories = ["All", "DevOps", "Backend", "Frontend", "Cloud"];
+
 export const SkillsSection = () => {
-    const [activeCategory, setActiveCategory] = useState("DevOps");
-    const filteredSkills = skills.filter((skill) => activeCategory === "All" || skill.category === activeCategory)
-    return <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-        <div className="container mx-auto max-w-5xl ">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center ">
-                My <span className="text-primary"> Skills</span>
-            </h2>
+  const [activeCategory, setActiveCategory] = useState("DevOps");
+  const filteredSkills = skills.filter(
+    (skill) => activeCategory === "All" || skill.category === activeCategory
+  );
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-                {categories.map((category, key) =>(
-                    <button onClick={() => setActiveCategory(category)} 
-                    key={key} 
-                    className={cn(
-                        "px-5 py-2 rounded-full transition-colors duration-300 capitalized",
-                         activeCategory == category ? "bg-primary text-primary-foreground " : "hover:scale-105 active:scale-95 bg-secondary/70 text-foreground hover:bd-secondary"
-                    )}>
-                        {category}
-                    </button>
-                ))}
-            </div>
+  return (
+    <section id="skills" className="py-20 px-4 relative">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">
+          My <span className="text-primary">Skills</span>
+        </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                 {filteredSkills.map((skill, key)=> (
-                    <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                        <div className="text-left mb-4 ">
-                            <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                        </div>
-                        <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                            <div className="bg-primary h-2 rounde-full origin-left animate-[grow_1.5s_ease-out" style={{width: skill.level + "%"}} />
-                        </div>
-
-                        <div className="text-right mt-1">
-                            <span className="text-sm text-muted-foreground"> {skill.level}%</span>
-                        </div>
-                    </div>
-                 ))}
-            </div>
-
+        {/* CATEGORY FILTER */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveCategory(category)}
+              className={cn(
+                "px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 border backdrop-blur-sm",
+                activeCategory === category
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-card/50 hover:bg-card/80 text-muted-foreground hover:text-foreground border-border hover:scale-105 active:scale-95"
+              )}
+            >
+              {category}
+            </button>
+          ))}
         </div>
+
+        {/* SKILLS GRID (smaller cards) */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        {filteredSkills.map((skill, index) => (
+    <div
+      key={index}
+      className="bg-card border border-border rounded-xl shadow-sm p-6 transition-all hover:shadow-xl hover:-translate-y-1"
+    >
+      <h3 className="font-semibold text-lg mb-3">{skill.name}</h3>
+
+      <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+        <div
+          className="bg-primary h-2 rounded-full origin-left transition-all duration-700"
+          style={{ width: `${skill.level}%` }}
+        />
+      </div>
+
+      <p className="text-right text-sm text-muted-foreground mt-2">
+        {skill.level}%
+      </p>
+    </div>
+  ))}
+</div>
+      </div>
     </section>
-}
+  );
+};
