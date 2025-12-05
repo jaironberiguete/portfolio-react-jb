@@ -40,7 +40,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/files/Jairon-Beriguete-CV.pdf"
+                href="/files/Jairon-Beriguete-CV-RE.pdf"
                 download
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 transition-colors duration-300"
               >
