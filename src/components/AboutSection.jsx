@@ -15,20 +15,23 @@ export const AboutSection = () => {
           {/* LEFT SIDE — INTRO */}
           <div className="space-y-6 text-center md:text-left">
             <h3 className="text-2xl font-semibold">
-              Full-Stack Developer & DevOps Engineer
+             DevOps Engineer & Full-Stack Developer
             </h3>
 
             <p className="text-muted-foreground leading-relaxed">
-              I bring a unique combination of IT operations and full-stack
-              development. I help teams build applications, automate workflows,
-              deploy microservices, and launch scalable platforms with clean
-              architecture.
+             I am a Full-Stack Software Developer and DevOps Engineer 
+             passionate about building scalable web applications and 
+             automated deployment pipelines. I work with technologies like 
+             React, Node.js, Python, Docker, Kubernetes, and AWS to 
+             create efficient, reliable, and maintainable software solutions.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              My focus is building production-ready systems using Docker,
-              Kubernetes, CI/CD pipelines, FastAPI, React, microservices, and
-              cloud-native patterns for performance and reliability.
+              With experience in CI/CD, cloud infrastructure, and 
+              microservices, I focus on delivering high-quality applications 
+              that perform well in real-world environments. I enjoy solving 
+              complex problems, optimizing workflows, and exploring new
+               tools to stay at the forefront of modern development practices.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
@@ -48,23 +51,8 @@ export const AboutSection = () => {
 
           {/* RIGHT SIDE — FEATURE CARDS */}
           <div className="grid grid-cols-1 gap-6">
-            {/* CARD 1 */}
-            <div className="gradient-border card-hover p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
-                  <p className="text-muted-foreground">
-                    Building secure, scalable, and responsive applications using
-                    React, Tailwind, FastAPI, JWT, microservices, and CI/CD.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* CARD 2 */}
+             {/* CARD 1 */}
             <div className="gradient-border card-hover p-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -80,7 +68,7 @@ export const AboutSection = () => {
               </div>
             </div>
 
-            {/* CARD 3 */}
+            {/* CARD 2 */}
             <div className="gradient-border card-hover p-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -97,6 +85,23 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* CARD 3 */}
+            <div className="gradient-border card-hover p-6">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <p className="text-muted-foreground">
+                    Building secure, scalable, and responsive applications using
+                    React, Tailwind, FastAPI, JWT, microservices, and CI/CD.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -33,39 +33,39 @@ const projects = [
     demoUrl: "",
     githubUrl: "https://github.com/jaironberiguete/ms-system-coverter-jb",
   },
-  {
-    id: 4,
-    title: "Real-Time Analytics Dashboard",
-    description:
-      "Real-time dashboard streaming data via AWS Kinesis and WebSockets, with a React frontend on S3 + CloudFront. Dockerized backend and IaC showcase cloud architecture and full-stack skills.",
-    image: "/projects/emotion-detector.png",
-    tags: ["Python", "OpenCV", "ML"],
-    demoUrl: "",
-    githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
-  },
+  // {
+  //   id: 4,
+  //   title: "Real-Time Analytics Dashboard",
+  //   description:
+  //     "Real-time dashboard streaming data via AWS Kinesis and WebSockets, with a React frontend on S3 + CloudFront. Dockerized backend and IaC showcase cloud architecture and full-stack skills.",
+  //   image: "/projects/emotion-detector.png",
+  //   tags: ["Python", "OpenCV", "ML"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
+  // },
 
-    {
-    id: 5,
-    title: "Serverless URL Shortener",
-    description:
-      "Serverless URL Shortener using AWS Lambda, API Gateway, DynamoDB, and S3. Users can shorten URLs with a fully serverless, scalable backend..",
-    image: "/projects/serverless-app.png",
-    tags: ["Python", "OpenCV", "ML"],
-    demoUrl: "",
-    githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
-  },
+  //   {
+  //   id: 5,
+  //   title: "Serverless URL Shortener",
+  //   description:
+  //     "Serverless URL Shortener using AWS Lambda, API Gateway, DynamoDB, and S3. Users can shorten URLs with a fully serverless, scalable backend..",
+  //   image: "/projects/serverless-app.png",
+  //   tags: ["Python", "OpenCV", "ML"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/jaironberiguete/emotion-detector-ai",
+  // },
 
-    {
-    id: 6,
-    title: "Personal Portfolio with CI/CD on AWS",
-    description:
-      "Automated portfolio deployment using React, S3, CloudFront, and GitHub Actions. Fully CI/CD-driven hosting showcasing DevOps and AWS cloud skills..",
-    image: "/projects/photography-site.png",
-    tags: ["React", "Tailwind", "Vite"],
-    demoUrl: "https://nels-gallery-website-jb.vercel.app/",
-    githubUrl:
-      "https://github.com/jaironberiguete/nels-gallery-website-jb",
-  },
+  //   {
+  //   id: 6,
+  //   title: "Personal Portfolio with CI/CD on AWS",
+  //   description:
+  //     "Automated portfolio deployment using React, S3, CloudFront, and GitHub Actions. Fully CI/CD-driven hosting showcasing DevOps and AWS cloud skills..",
+  //   image: "/projects/photography-site.png",
+  //   tags: ["React", "Tailwind", "Vite"],
+  //   demoUrl: "https://nels-gallery-website-jb.vercel.app/",
+  //   githubUrl:
+  //     "https://github.com/jaironberiguete/nels-gallery-website-jb",
+  // },
 ];
 
 export const ProjectsSection = () => {
