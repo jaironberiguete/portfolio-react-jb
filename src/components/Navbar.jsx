@@ -8,8 +8,8 @@ export const Navbar = ({ onToggle }) => {
   const nav = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
     // { name: "Certificates", href: "#certificates" },
     { name: "Contact", href: "#contact" }, 
   ];
