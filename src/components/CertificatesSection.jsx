@@ -3,28 +3,28 @@ import { ExternalLink } from "lucide-react";
 const certificates = [
   {
     id: 1,
-    title: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
+    title: "DevOps and Software Engineering Professional",
+    issuer: "IBM",
     date: "2025",
-    image: "/certificates/aws-solutions-architect.png",
-    url: "https://www.yourcertlink.com/aws-solutions-architect",
+    image: "/certificates/CourseraGHYFPU7LDMKL.png",
+    url: "https://www.credly.com/badges/7cead98e-bd72-4654-8b72-d303d4e6040c",
   },
 
   {
     id: 3,
-    title: "Certified Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
+    title: "Monitoring and Observability for Development and DevOps",
+    issuer: "IBM",
     date: "2025",
-    image: "/certificates/cka.png",
-    url: "https://www.yourcertlink.com/cka",
+    image: "/certificates/CourseraK4ZHRJK16VHO.png",
+    url: "https://www.credly.com/badges/2f250c98-02e3-4005-9bb7-f810dddb8543/",
   },
   {
     id: 4,
-    title: "Python for Data Science",
+    title: "Developing AI Applications with Python and Flask",
     issuer: "IBM",
-    date: "2023",
-    image: "/certificates/python-ds.png",
-    url: "https://www.yourcertlink.com/python-ds",
+    date: "2024",
+    image: "/certificates/CourseraAR0BO98JLF2C.png",
+    url: "https://www.credly.com/badges/be80d7d8-d121-4063-bb38-24cccfde253c",
   },
 ];
 
