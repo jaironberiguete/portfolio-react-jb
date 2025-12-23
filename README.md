@@ -1,12 +1,54 @@
-# React + Vite
+# 🚀 React + Tailwind Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built with **React** and **Tailwind CSS** to showcase my projects, technical skills, and experience as a Software Engineer.
 
-Currently, two official plugins are available:
+This portfolio highlights my work in **frontend development**, **backend integration**, and **DevOps-focused projects**, with an emphasis on clean UI, performance, and scalability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔗 **Portfolio Website**  
+👉 https://jaironberiguete.dev
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, JavaScript (ES6+)
+- **Styling:** Tailwind CSS
+- **Routing:** React Router
+- **Build Tool:** Vite
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
+
+---
+
+## ✨ Features
+
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🎨 Clean and modern UI using Tailwind CSS
+- ⚡ Fast performance with optimized assets
+- 🧩 Reusable React components
+- 📂 Projects section with live demos & source code
+- 📄 About & Skills section
+- 📬 Contact section with social links
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+ ├── components/
+ │   ├── Navbar.jsx
+ │   ├── Footer.jsx
+ │   ├── ProjectCard.jsx
+ ├── pages/
+ │   ├── Home.jsx
+ │   ├── Projects.jsx
+ │   ├── About.jsx
+ │   ├── Contact.jsx
+ ├── assets/
+ ├── App.jsx
+ └── main.jsx
