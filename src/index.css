@@ -51,10 +51,10 @@
         to   { opacity: 0; transform: translateY(-15px); }
     }
 
-    @keyframes gridMove {
+    /* @keyframes gridMove {
     0% { background-position: 0 0; }
     100% { background-position: 200px 200px; }
-    }
+    } */
 
     /* 🌠 NEW smoother meteor trail */
     @keyframes meteor {
