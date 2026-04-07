@@ -164,13 +164,13 @@
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
 
-@utility hero-grid-animation {
+/* @utility hero-grid-animation {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 18s linear infinite;
-}
+} */
 
 
 
